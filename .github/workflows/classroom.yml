@@ -19,5 +19,5 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Autograding
-        uses: education/autograding-grader@v1
+        uses: education/autograding@v1
         continue-on-error: true
