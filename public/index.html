@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeComm V2 | BLE Auto-Heal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="vibe-text">VIBE</span><span class="comm-text">COMM</span>
+                <span class="version-tag">V2.0</span>
+            </div>
+            <div class="connection-status" id="status-pill">
+                <div class="status-dot"></div>
+                <span id="status-text">DISCONNECTED</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <h1>Async Bluetooth <br><span class="highlight">Control Link</span></h1>
+                <p class="subtitle">Industrial-grade self-healing connectivity for real-time robotics.</p>
+                
+                <div class="action-bar">
+                    <button id="connect-btn" class="primary-btn">INITIALIZE LINK</button>
+                    <button id="disconnect-btn" class="secondary-btn" disabled>TERMINATE</button>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <!-- Connectivity Card -->
+                <div class="card stat-card">
+                    <h3>Connection Stability</h3>
+                    <div class="stat-value" id="uptime-value">0ms</div>
+                    <div class="stat-label">Uptime Since Last Healing</div>
+                    <div class="healing-indicator" id="healing-bar">
+                        <div class="bar-fill"></div>
+                    </div>
+                </div>
+
+                <!-- Throughput Card -->
+                <div class="card stat-card">
+                    <h3>Command Throughput</h3>
+                    <div class="stat-value" id="throughput-value">0<span>cmd/s</span></div>
+                    <div class="stat-label">50ms Throttle Buffer</div>
+                    <div class="signal-visualizer" id="signal-bars">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <!-- Log Card -->
+                <div class="card log-card">
+                    <div class="card-header">
+                        <h3>Event Stream</h3>
+                        <button class="clear-btn" id="clear-log">CLEAR</button>
+                    </div>
+                    <div class="log-container" id="event-log">
+                        <div class="log-entry system">[SYSTEM] Ready for initialization...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-info">
+                <span>ADV-15 Unit: BLE Async Reconnection Lab</span>
+                <span class="copyright">© 2026 Vibe Coding Academy</span>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
