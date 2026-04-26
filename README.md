@@ -1,5 +1,3 @@
-Viewed adv-15-unit-ble-async.html:1-381
-
 針對 **`adv-15-unit-ble-async` (Web Bluetooth 非同步連線)** 單元，這是通訊底層技術的巔峰訓練。它要求學員將「非同步編程 (Async/Await)」與「實體硬體通訊」深度結合，解決無線通訊中不可避免的 **斷線、延遲與併發衝突** 問題，打造工業級穩定的「自癒式控制鏈」。
 
 以下是在 **GitHub Classroom** 部署其作業 (Assignments) 的具體建議：
